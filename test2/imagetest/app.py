@@ -17,7 +17,7 @@ db = conn.gps_saver
 # collection 생성
 collect = db.data
 app = Flask(__name__)
-@app.route("/", methods=["GET", "POST"])
+@app.route("/carNum", methods=["GET", "POST"])
 def index():
     json_data = request.get_json()
 
@@ -59,4 +59,4 @@ def list_library():
     return jsonify({"code": 0, "msg": "Storage completed"})
 
 if __name__== "__main__":
-	pass
+	app.run()
