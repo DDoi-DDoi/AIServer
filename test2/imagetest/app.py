@@ -59,4 +59,4 @@ def list_library():
     return jsonify({"code": 0, "msg": "Storage completed"})
 
 if __name__== "__main__":
-	app.run()
+	pass
