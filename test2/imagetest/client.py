@@ -4,7 +4,7 @@ import base64
 import cv2
 import numpy as np
 
-image_name = 'C:\\Users\\82104\\Desktop\\testFlask\\test2\\imagetest\\car5.jpg'
+image_name = 'C:\\Users\\82104\\Desktop\\testFlask\\test2\\imagetest\\car7.jpg'
 ff = np.fromfile(image_name, np.uint8)
 img = cv2.imdecode(ff, cv2.IMREAD_UNCHANGED)
 cv2.imshow("test", img)
