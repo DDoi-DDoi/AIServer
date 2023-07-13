@@ -2,7 +2,7 @@
 from pymongo import MongoClient
 import json
 import sys
-sys.path.append('C:\\Users\\82104\\Desktop\\testFlask\\test2')
+sys.path.append('~\\AIServer\\test2')
 from AIServer.test2.Services.OCRservice import ocrCar
 
 
