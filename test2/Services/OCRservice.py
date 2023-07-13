@@ -1,6 +1,5 @@
 ﻿import cv2
 import numpy as np
-import matplotlib.pyplot as plt
 import pytesseract
 from PIL import Image
 from io import BytesIO

@@ -1,8 +1,6 @@
 ﻿from flask import Flask, jsonify, request
 from pymongo import MongoClient
-from PIL import Image
 import json
-from io import BytesIO
 import sys
 sys.path.append('C:\\Users\\82104\\Desktop\\testFlask\\test2')
 from Services.OCRservice import ocrCar
