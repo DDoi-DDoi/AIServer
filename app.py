@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import json
 import sys
 sys.path.append('~\\AIServer\\test2')
-from AIServer.test2.Services.OCRservice import ocrCar
+#from AIServer.test2.Services.OCRservice import ocrCar
 
 
 # db 연동
@@ -29,13 +29,17 @@ def index():
 
     if not img:
         return jsonify(doc["answer"])
-    result = ocrCar(dict_data)
+    result = 1
+    #result = ocrCar(dict_data)
     doc["answer"] = result
     collect.insert_one(doc)
     #img.save('test.jpg')
 
     return jsonify(result)
 
+@app.route('/check', methods=['GET'])
+def checking():
+    return "ok" 
 
 @app.route('/img/', methods=['GET'])
 def list_library():
