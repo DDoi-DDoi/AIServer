@@ -1,9 +1,10 @@
-﻿from flask import Flask, jsonify, request
-from pymongo import MongoClient
-import json
+﻿import json
 import sys
-sys.path.append('~\\AIServer\\test2')
-#from AIServer.test2.Services.OCRservice import ocrCar
+from flask import Flask, jsonify, request
+from pymongo import MongoClient
+from flask_cors import CORS, cross_origin
+sys.path.append('..\\test2\\Services')
+from test2.Services.OCRservice import ocrCar
 
 
 # db 연동
@@ -15,6 +16,8 @@ db = conn.gps_saver
 # collection 생성
 collect = db.data
 app = Flask(__name__)
+CORS(app)
+
 @app.route("/carNum", methods=["GET", "POST"])
 def index():
     json_data = request.get_json()
@@ -29,13 +32,13 @@ def index():
 
     if not img:
         return jsonify(doc["answer"])
-    result = 1
-    #result = ocrCar(dict_data)
+    
+    result = ocrCar(dict_data)
     doc["answer"] = result
     collect.insert_one(doc)
     #img.save('test.jpg')
 
-    return jsonify(result)
+    return result
 
 @app.route('/check', methods=['GET'])
 def checking():

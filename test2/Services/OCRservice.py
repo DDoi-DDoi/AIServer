@@ -4,7 +4,7 @@ import pytesseract
 from PIL import Image
 from io import BytesIO
 import base64
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'..\..\Tesseract-OCR\tesseract.exe'
 def ocrCar(dict_data):
 
     img = dict_data['img']
