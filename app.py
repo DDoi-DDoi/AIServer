@@ -3,8 +3,8 @@ import sys
 from flask import Flask, jsonify, request
 from pymongo import MongoClient
 from flask_cors import CORS, cross_origin
-#sys.path.append('..\\test2\\Services')
-from test2.Services.OCRservice import ocrCar
+sys.path.append('..\\test2\\Services')
+#from test2.Services.OCRservice import ocrCar
 
 
 # db 연동
