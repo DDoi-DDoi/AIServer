@@ -1,8 +1,9 @@
 ﻿Flask==2.3.2
 pymongo==4.4.0
 Pillow==9.2.0
-opencv-python==4.8.0.74
+opencv-python==4.5.4.60
 numpy==1.23.2
+pandas==1.4.4
 pytesseract==0.3.10
 Flask-Migrate==4.0.4
 Flask-SQLAlchemy==3.0.5
