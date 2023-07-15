@@ -1,9 +1,10 @@
-﻿import cv2
+﻿
 import numpy as np
 import pytesseract
 from PIL import Image
 from io import BytesIO
 import base64
+import cv2
 pytesseract.pytesseract.tesseract_cmd = r'..\..\Tesseract-OCR\tesseract.exe'
 def ocrCar(dict_data):
 
