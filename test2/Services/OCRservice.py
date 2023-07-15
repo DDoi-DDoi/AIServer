@@ -3,6 +3,8 @@ import pytesseract
 from PIL import Image
 from io import BytesIO
 import base64
+import sys
+sys.path.append('/usr/local/lib/python3.10/site-packages/opencv_python.libs')
 import cv2
 pytesseract.pytesseract.tesseract_cmd = r'..\..\Tesseract-OCR\tesseract.exe'
 def ocrCar(dict_data):
