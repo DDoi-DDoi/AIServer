@@ -4,7 +4,7 @@ from flask import Flask, jsonify, request
 from pymongo import MongoClient
 from flask_cors import CORS, cross_origin
 sys.path.append('..\\test2\\Services')
-from test2.Services.OCRservice import ocrCar
+#from test2.Services.OCRservice import ocrCar
 
 
 # db 연동
@@ -32,8 +32,8 @@ def index():
 
     if not img:
         return jsonify(doc["answer"])
-    
-    result = ocrCar(dict_data)
+    result = 1
+    #result = ocrCar(dict_data)
     doc["answer"] = result
     collect.insert_one(doc)
     #img.save('test.jpg')
