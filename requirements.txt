@@ -7,3 +7,4 @@ pytesseract==0.3.10
 Flask-Migrate==4.0.4
 Flask-SQLAlchemy==3.0.5
 Flask-Cors==4.0.0
+opencv-python-headless==3.4.18.65
