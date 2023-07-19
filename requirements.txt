@@ -1,5 +1,4 @@
-﻿-i libgl1-mesa-glx
-
+﻿
 Flask==2.3.2
 pymongo==4.4.0
 Pillow==9.2.0

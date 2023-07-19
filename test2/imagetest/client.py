@@ -6,7 +6,7 @@ except:
     pass
 import numpy as np
 
-"""if __name__ == "main":
+if __name__ == "main":
 
     image_name = '.\\car6.jpg'
     ff = np.fromfile(image_name, np.uint8)
@@ -21,4 +21,4 @@ import numpy as np
             }
 
     r = requests.post("https://port-0-aiserver-20zynm2mljxybsqy.sel4.cloudtype.app/carNum", json=files)
-    print(r.json())"""
+    print(r.json())
