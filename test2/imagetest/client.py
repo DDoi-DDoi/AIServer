@@ -18,5 +18,5 @@ files = {
             "img": b64_string,
         }
 
-r = requests.post("http://127.0.0.1:5000", json=files)
+r = requests.post("https://port-0-aiserver-20zynm2mljxybsqy.sel4.cloudtype.app/carNum", json=files)
 print(r.json())
