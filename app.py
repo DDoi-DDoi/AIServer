@@ -32,8 +32,8 @@ def index():
 
     if not img:
         return jsonify(doc["answer"])
-    result = 1
-    #result = ocrCar(dict_data)
+    #result = 1
+    result = ocrCar(dict_data)
     doc["answer"] = result
     collect.insert_one(doc)
     #img.save('test.jpg')
