@@ -4,11 +4,10 @@ from PIL import Image
 from io import BytesIO
 import base64
 import sys
-sys.path.append('..\\usr\\local\\lib\\python3.10\\site-packages\\opencv_python.libs')
-sys.path.append('..\\usr\\local\\lib\\python3.10\\site-packages\\opencv_python_headless-3.4.18.65.dist-info')
-sys.path.append('..\\usr\\local\\lib\\python3.10\\site-packages\\opencv_python-4.5.4.60.dist-info')
-sys.path.append('..\\usr\\local\\lib\\python3.10\\site-packages\\opencv_python_headless.libs')
-import cv2
+try:
+    import cv2
+except:
+    pass
 pytesseract.pytesseract.tesseract_cmd = r'..\..\Tesseract-OCR\tesseract.exe'
 def ocrCar(dict_data):
 
