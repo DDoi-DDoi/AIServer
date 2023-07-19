@@ -1,6 +1,9 @@
 ﻿import requests
 import base64
-import cv2
+try:
+    import cv2
+except:
+    pass
 import numpy as np
 
 image_name = '.\\car6.jpg'
