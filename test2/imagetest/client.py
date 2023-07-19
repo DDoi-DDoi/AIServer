@@ -1,4 +1,4 @@
-﻿"""import requests
+﻿import requests
 import base64
 import cv2
 import numpy as np
@@ -16,4 +16,4 @@ files = {
         }
 
 r = requests.post("http://127.0.0.1:5000", json=files)
-print(r.json())"""
+print(r.json())
