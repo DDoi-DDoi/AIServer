@@ -5,8 +5,14 @@ from pymongo import MongoClient
 from flask_cors import CORS, cross_origin
 sys.path.append('..\\test2\\Services')
 from test2.Services.OCRservice import ocrCar
+import logging
 
 
+logger = logging.getLogger()
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
 # db 연동
 conn = MongoClient('127.0.0.1')
 
@@ -33,15 +39,18 @@ def index():
     if not img:
         return jsonify(doc["answer"])
     #result = 1
+    logging.info('딥러닝 시작')
     result = ocrCar(dict_data)
+    logging.info('완료')
     doc["answer"] = result
     collect.insert_one(doc)
     #img.save('test.jpg')
-
+    logging.info(f'결과값 : {result}')
     return result
 
 @app.route('/check', methods=['GET'])
 def checking():
+    logging.info('잘 들어왔음')
     return "ok" 
 
 @app.route('/img/', methods=['GET'])
