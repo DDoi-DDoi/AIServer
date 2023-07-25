@@ -34,10 +34,10 @@ def index():
         "img" : json_data["img"],
         "answer" : "None"
     }
-    img = list(db.conn.gps_saver.find_one({"img" : json_data["img"]}))
+    #img = list(db.conn.gps_saver.find_one({"img" : json_data["img"]}))
 
-    if not img:
-        return jsonify(doc["answer"])
+    #if not img:
+    #    return jsonify(doc["answer"])
     #result = 1
     logging.info('딥러닝 시작')
     result = ocrCar(dict_data)
