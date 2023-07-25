@@ -14,13 +14,13 @@ stream_handler = logging.StreamHandler()
 stream_handler.setFormatter(formatter)
 logger.addHandler(stream_handler)
 # db 연동
-conn = MongoClient('127.0.0.1')
+#conn = MongoClient('127.0.0.1')
 
 # db 생성
-db = conn.gps_saver
+#db = conn.gps_saver
 
 # collection 생성
-collect = db.data
+#collect = db.data
 app = Flask(__name__)
 CORS(app)
 
@@ -43,7 +43,7 @@ def index():
     result = ocrCar(dict_data)
     logging.info('완료')
     doc["answer"] = result
-    collect.insert_one(doc)
+    #collect.insert_one(doc)
     #img.save('test.jpg')
     logging.info(f'결과값 : {result}')
     return result
