@@ -4,7 +4,7 @@ from PIL import Image
 from io import BytesIO
 import base64
 import sys
-import cv2
+#import cv2
 #from cv2 import COLOR_BGR2GRAY,COLOR_BGR2GRAY,MORPH_TOPHAT,MORPH_BLACKHAT,ADAPTIVE_THRESH_GAUSSIAN_C,THRESH_BINARY_INV
 #from cv2 import cvtColor,getStructuringElement,morphologyEx,add,subtract,GaussianBlur,adaptiveThreshold
 pytesseract.pytesseract.tesseract_cmd = r'..\..\Tesseract-OCR\tesseract.exe'
