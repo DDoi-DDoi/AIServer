@@ -4,13 +4,14 @@ from PIL import Image
 from io import BytesIO
 import base64
 import sys
-try:
-    import cv2
-except:
-    pass
+from cv2 import COLOR_BGR2GRAY,COLOR_BGR2GRAY,MORPH_TOPHAT,MORPH_BLACKHAT,ADAPTIVE_THRESH_GAUSSIAN_C,THRESH_BINARY_INV
+from cv2 import cvtColor,getStructuringElement,morphologyEx,add,subtract,GaussianBlur,adaptiveThreshold
 pytesseract.pytesseract.tesseract_cmd = r'..\..\Tesseract-OCR\tesseract.exe'
 def ocrCar(dict_data):
-
+    try:
+        import cv2
+    except:
+        pass
     img = dict_data['img']
     img = base64.b64decode(img)
     img = BytesIO(img)
